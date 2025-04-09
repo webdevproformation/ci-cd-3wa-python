@@ -4,14 +4,13 @@ pipeline {
         stage('build') {
             agent {
                 docker {
-                    image 'python'
+                    image 'malikh551/python_with_flask'
                     reuseNode true
                 }
             }
             steps {
                 sh '''
-                    echo 'jenkins va installer les dépendances du projet'
-                    sudo pip install -r requirements.txt
+                    echo 'exécution du projet'
                     python3 index.py
                     echo 'fin'
                     ls -al
