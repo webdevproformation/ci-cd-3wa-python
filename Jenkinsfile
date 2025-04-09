@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             agent {
                 docker {
-                    image 'malikh551/python_with_flask:lastest'
+                    image 'malikh551/python_with_flask:latest'
                     reuseNode true
                 }
             }
