@@ -11,9 +11,7 @@ pipeline {
             steps {
                 sh '''
                     echo 'jenkins va installer les dépendances du projet'
-                    python -m venv venv
-                    source venv/bin/activate
-                    pip install Flask
+                    pip install -r requirements.txt
                     python3 index.py
                     echo 'fin'
                     ls -al
