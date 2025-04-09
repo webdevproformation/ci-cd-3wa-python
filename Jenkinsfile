@@ -12,7 +12,7 @@ pipeline {
                 sh '''
                     echo 'jenkins va installer les dépendances du projet'
                     python -m venv venv
-                    ./venv/bin/activate
+                    source /venv/bin/activate
                     pip install Flask
                     python3 index.py
                     echo 'fin'
